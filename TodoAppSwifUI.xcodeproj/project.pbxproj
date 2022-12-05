@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E03293E26BF007C8064 /* AddTodoView.swift */; };
+		4DB94E06293E2D53007C8064 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E05293E2D53007C8064 /* Todo.swift */; };
+		4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E07293E3690007C8064 /* NoDataView.swift */; };
+		4DB94E0A293E3BCA007C8064 /* TodoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E09293E3BCA007C8064 /* TodoListRowView.swift */; };
+		4DB94E0C293E3DC3007C8064 /* TodoItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E0B293E3DC3007C8064 /* TodoItemDetailView.swift */; };
 		4DBAD28926AF38AE0057A5FF /* TodoAppSwifUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAD28826AF38AE0057A5FF /* TodoAppSwifUIApp.swift */; };
-		4DBAD28B26AF38AE0057A5FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAD28A26AF38AE0057A5FF /* ContentView.swift */; };
+		4DBAD28B26AF38AE0057A5FF /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */; };
 		4DBAD28D26AF38B90057A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAD28C26AF38B90057A5FF /* Assets.xcassets */; };
 		4DBAD29026AF38B90057A5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DB94E03293E26BF007C8064 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		4DB94E05293E2D53007C8064 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		4DB94E07293E3690007C8064 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		4DB94E09293E3BCA007C8064 /* TodoListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRowView.swift; sourceTree = "<group>"; };
+		4DB94E0B293E3DC3007C8064 /* TodoItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemDetailView.swift; sourceTree = "<group>"; };
 		4DBAD28526AF38AE0057A5FF /* TodoAppSwifUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppSwifUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBAD28826AF38AE0057A5FF /* TodoAppSwifUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppSwifUIApp.swift; sourceTree = "<group>"; };
-		4DBAD28A26AF38AE0057A5FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		4DBAD28C26AF38B90057A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DBAD29126AF38B90057A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +43,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DB94E0F293E4D7E007C8064 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DB94E05293E2D53007C8064 /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DB94E10293E4D9E007C8064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */,
+				4DB94E03293E26BF007C8064 /* AddTodoView.swift */,
+				4DB94E07293E3690007C8064 /* NoDataView.swift */,
+				4DB94E09293E3BCA007C8064 /* TodoListRowView.swift */,
+				4DB94E0B293E3DC3007C8064 /* TodoItemDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4DBAD27C26AF38AE0057A5FF = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				4DBAD28826AF38AE0057A5FF /* TodoAppSwifUIApp.swift */,
-				4DBAD28A26AF38AE0057A5FF /* ContentView.swift */,
+				4DB94E10293E4D9E007C8064 /* View */,
+				4DB94E0F293E4D7E007C8064 /* Model */,
 				4DBAD28C26AF38B90057A5FF /* Assets.xcassets */,
 				4DBAD29126AF38B90057A5FF /* Info.plist */,
 				4DBAD28E26AF38B90057A5FF /* Preview Content */,
@@ -138,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DBAD28B26AF38AE0057A5FF /* ContentView.swift in Sources */,
+				4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */,
+				4DBAD28B26AF38AE0057A5FF /* TodoListView.swift in Sources */,
+				4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */,
 				4DBAD28926AF38AE0057A5FF /* TodoAppSwifUIApp.swift in Sources */,
+				4DB94E0C293E3DC3007C8064 /* TodoItemDetailView.swift in Sources */,
+				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
+				4DB94E0A293E3BCA007C8064 /* TodoListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -269,15 +305,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoAppSwifUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 5G9N4AJU93;
+				DEVELOPMENT_TEAM = A28NKSTKN3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoAppSwifUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onicorn.vn.TodoAppSwifUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forever.bee.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -291,15 +327,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoAppSwifUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 5G9N4AJU93;
+				DEVELOPMENT_TEAM = A28NKSTKN3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoAppSwifUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onicorn.vn.TodoAppSwifUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forever.bee.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

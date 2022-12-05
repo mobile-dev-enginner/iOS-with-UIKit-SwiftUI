@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TodoAppSwifUIApp: App {
+    // MARK: - SOME SORT OF VIEW
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodoListView()
         }
     }
 }
