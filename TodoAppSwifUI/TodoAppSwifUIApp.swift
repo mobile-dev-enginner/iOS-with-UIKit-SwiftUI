@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct TodoAppSwifUIApp: App {
+    let persistenceController = PersistenceController.shared
     // MARK: - SOME SORT OF VIEW
     var body: some Scene {
         WindowGroup {
             TodoListView()
+                .environment(
+                    \.managedObjectContext,
+                     persistenceController.container.viewContext
+                )
         }
     }
 }

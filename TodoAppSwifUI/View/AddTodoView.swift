@@ -8,14 +8,15 @@
 import SwiftUI
 /// The add todo view for adding user inputs
 struct AddTodoView: View {
+    @Environment(\.managedObjectContext) var context
     // MARK: - BINDINGS
     @Binding var showAddTodoView: Bool
-    @Binding var todos: [Todo]
-
     // MARK: - STATES
-    @State private var name: String = "New Todo"
-    @State private var selectedCategory = 0
-    var categoryTypes = ["family", "personal", "work" ]
+    @State var name: String = "New Todo"
+    @State var selectedCategory = 0
+    @State var category: Category
+    @State var isEditing = false
+    var categoryTypes = Category.allCases
 
 
     // MARK: - SOME SORT OF VIEW
@@ -23,14 +24,16 @@ struct AddTodoView: View {
         VStack {
             Text(NSLocalizedString("Add Todo", comment: "Add Todo Label"))
                 .font(.largeTitle)
-            TextField(NSLocalizedString("To do name", comment: "To od name hint"), text: $name)
+            TextField(NSLocalizedString("To do name", comment: "To do name hint"), text: $name, onEditingChanged: { e in
+                self.isEditing = e
+            })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .border(Color.black).padding()
 
             Text(NSLocalizedString("Select Category", comment: "Select Category"))
             Picker("", selection: $selectedCategory) {
                 ForEach(0..<categoryTypes.count) {
-                    Text(self.categoryTypes[$0])
+                    Text(categoryTypes[$0].rawValue)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -38,23 +41,35 @@ struct AddTodoView: View {
         .padding()
 
         Button(action: {
+            if self.name.trimmingCharacters(in: .whitespaces) == "" {
+                return
+            }
             self.showAddTodoView = false
-            todos.append(Todo(
-                name: name,
-                category: categoryTypes[selectedCategory]))
+            addTodo(name: self.name, category: self.categoryTypes[selectedCategory])
         }, label: {
             Text(NSLocalizedString("Done", comment: "Done"))
+                .font(.system(.headline, design: .rounded))
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.purple)
+                .cornerRadius(10)
         })
+    }
+
+    // MARK: - METHODS
+    /// Insert a new record into the database
+    private func addTodo(name: String , category: Category) {
+        let task = Todo(context: context)
+        task.id = UUID()
+        task.name = name
+        task.category = category.rawValue
+
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
     }
 }
 
-struct AddTodoView_Previews: PreviewProvider {
-    @State static var showAddTodoView: Bool = true
-    @State static var todos = [
-        Todo(name: "Write SwiftUI App", category: "work"),
-        Todo(name: "Read Bible", category: "personal")
-    ]
-    static var previews: some View {
-        AddTodoView(showAddTodoView: self.$showAddTodoView, todos: self.$todos).previewDevice("iPhone SE (2nd generation)")
-    }
-}

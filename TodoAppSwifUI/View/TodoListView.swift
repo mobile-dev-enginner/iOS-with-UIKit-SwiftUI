@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import CoreData
 /// The app's main view
 struct TodoListView: View {
-    // MARK: - STATES
-    /// A state array
-    @State var todos: [Todo] = []
+    // MARK: - STATES, PROPERTY WRAPPER
+    @Environment(\.managedObjectContext) var viewContext
+
+    @FetchRequest(
+        entity: Todo.entity(),
+        sortDescriptors: [ NSSortDescriptor(keyPath: \Todo.category, ascending: false) ])
+    var todos: FetchedResults<Todo>
+
     @State private var showNewTodo = false
 
     // MARK: - SOME SORT OF VIEW
@@ -28,19 +34,17 @@ struct TodoListView: View {
                         // When an item is tapped
                         NavigationLink(destination: VStack {
                             TodoItemDetailView(todo: todo)
-                        }) {
+                        })
+                        {
                             TodoListRowView(todo: todo)
+                                .onLongPressGesture(perform: {
+                                    updateTodo(todo: todo)
+                                })
                         }
                     }
                     // Deleting a Todo item
-                    .onDelete(perform: { i in
-                        todos.remove(atOffsets: i)
-                    })
-                    // Rearranging rows
-                    .onMove(perform: { (i , j) in
-                        todos.move(fromOffsets: i, toOffset: j)
-                    })
-                    }
+                    .onDelete(perform: deleteTodo)
+                }
                 .rotation3DEffect(Angle(degrees: showNewTodo ? 5 : 0), axis: (x: 1, y: 0, z: 0))
                 .offset(y: showNewTodo ? -50 : 0)
                 .animation(.easeOut, value: showNewTodo)
@@ -54,17 +58,39 @@ struct TodoListView: View {
                 })
                     .sheet(isPresented: $showNewTodo) {
                         AddTodoView(
-                            showAddTodoView: self.$showNewTodo,
-                            todos: self.$todos
+                            showAddTodoView: $showNewTodo, name: "", category: .family
                         )
                     },
             trailing: EditButton())
+        }
+    }
+    // MARK: - METHODS
+    private func updateTodo(todo: FetchedResults<Todo>.Element) {
+        todo.name = "🤪"
+        do {
+            try viewContext.save()
+        } catch {
+            print(error)
+        }
+    }
+    private func deleteTodo(offsets : IndexSet) {
+        for i in offsets {
+            let todo = todos[i]
+            viewContext.delete(todo)
+        }
+
+        DispatchQueue.main.async {
+            do {
+                try viewContext.save()
+            } catch {
+                print(error)
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoListView().previewDevice("iPhone SE (2nd generation)")
+        TodoListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewDevice("iPhone SE (2nd generation)")
     }
 }
