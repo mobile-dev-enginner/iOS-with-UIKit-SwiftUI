@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA12B9C293EFC06007A45B7 /* SearchBar.swift */; };
 		4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E03293E26BF007C8064 /* AddTodoView.swift */; };
 		4DB94E06293E2D53007C8064 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E05293E2D53007C8064 /* Todo.swift */; };
 		4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E07293E3690007C8064 /* NoDataView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DA12B9C293EFC06007A45B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4DB94E03293E26BF007C8064 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		4DB94E05293E2D53007C8064 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4DB94E07293E3690007C8064 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DA12B9E293F0474007A45B7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4DA12B9C293EFC06007A45B7 /* SearchBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		4DB94E0F293E4D7E007C8064 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBAD28826AF38AE0057A5FF /* TodoAppSwifUIApp.swift */,
+				4DA12B9E293F0474007A45B7 /* Components */,
 				4DB94E18293E89E4007C8064 /* Data */,
 				4DB94E10293E4D9E007C8064 /* View */,
 				4DB94E0F293E4D7E007C8064 /* Model */,
@@ -198,6 +209,7 @@
 				4DBAD28926AF38AE0057A5FF /* TodoAppSwifUIApp.swift in Sources */,
 				4DB94E0C293E3DC3007C8064 /* TodoItemDetailView.swift in Sources */,
 				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
+				4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */,
 				4DB94E0A293E3BCA007C8064 /* TodoListRowView.swift in Sources */,
 				4DB94E15293E56ED007C8064 /* Todo.xcdatamodeld in Sources */,
 			);

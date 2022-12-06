@@ -17,6 +17,7 @@ struct TodoListView: View {
         sortDescriptors: [ NSSortDescriptor(keyPath: \Todo.category, ascending: false) ])
     var todos: FetchedResults<Todo>
 
+    @State private var searchText = ""
     @State private var showNewTodo = false
 
     // MARK: - SOME SORT OF VIEW
@@ -24,13 +25,18 @@ struct TodoListView: View {
 
         NavigationView {
             VStack {
+                // The search bar
+                SearchBar(text: $searchText)
+                    .padding(.top, -10)
                 // If there is no data, show an empty view
                 if todos.count == 0 {
                     NoDataView()
                 }
-
+                // The todo list
                 List {
-                    ForEach(todos) { todo in
+                    ForEach(todos.filter({
+                        searchText.isEmpty ? true : $0.name.contains(searchText)
+                    })) { todo in
                         // When an item is tapped
                         NavigationLink(destination: VStack {
                             TodoItemDetailView(todo: todo)
