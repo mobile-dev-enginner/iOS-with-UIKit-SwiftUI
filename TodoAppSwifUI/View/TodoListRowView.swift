@@ -17,6 +17,7 @@ struct TodoListRowView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(todo.name)
+                .font(.custom("Nunito-Regular", size: 20, relativeTo: .headline))
             Spacer()
             Circle()
                 .frame(width: 15, height: 15)

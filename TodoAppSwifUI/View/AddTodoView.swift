@@ -8,87 +8,97 @@
 import SwiftUI
 /// The add todo view for adding user inputs
 struct AddTodoView: View {
+    // MARK: - PROPERTY WRAPPER
     @Environment(\.managedObjectContext) var context
-    // MARK: - BINDINGS
-    @Binding var showAddTodoView: Bool
-    // MARK: - STATES
+    @Environment(\.dismiss) private var dismiss
+
+    @ObservedObject private var todoViewModel: TodoFormViewModel
+
+    // MARK: - STATE VARIABLES
     @State var isEditing = false
-    @State var name: String = "New Todo"
     @State var selectedCategory = 0
-    @State var priority: Priority
-    @State var category: Category
+
     var categoryTypes = Category.allCases
 
+    // MARK: - INITIALIZERS
+    init() {
+        let viewModel = TodoFormViewModel()
+        todoViewModel = viewModel
+    }
 
     // MARK: - SOME SORT OF VIEW
     var body: some View {
         VStack {
+            Text(NSLocalizedString("Add Todo", comment: "Add Todo Label"))
+                .font(.largeTitle)
+                .foregroundColor(Color.accentColor)
+                .padding()
             VStack(alignment: .leading) {
-                Text(NSLocalizedString("Add Todo", comment: "Add Todo Label"))
-                    .font(.largeTitle)
                 // INPUT TEXT
-                TextField(NSLocalizedString("To do name", comment: "To do name hint"), text: $name, onEditingChanged: { e in
-                    self.isEditing = e
-                })
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .border(Color.black)
-                    .padding()
+                FormTextField(
+                    value: $todoViewModel.name, isEditing: $isEditing,
+                    label: NSLocalizedString("Name", comment: "Name label"),
+                    placeholder: NSLocalizedString("To-do name", comment: "To do name hint"))
                 // CATEGORY
-                Text(NSLocalizedString("Select Category", comment: "Select Category"))
+                Text(NSLocalizedString("Select Category", comment: "Select Category").uppercased())
+                    .font(.system(.headline, design: .rounded))
+                    .foregroundColor(Color(.darkGray))
+
                 Picker("", selection: $selectedCategory) {
                     ForEach(0..<categoryTypes.count) {
                         Text(categoryTypes[$0].rawValue)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
+                .padding(10)
+                // PRIORITY
+                Text(NSLocalizedString("Priority", comment: "Priority Label").uppercased())
+                    .font(.system(.headline, design: .rounded))
+                    .foregroundColor(Color(.darkGray))
+                    .padding(.bottom, 10)
             }
-            .padding()
-            // PRIORITY
-            Text(NSLocalizedString("Priority", comment: "Priority Label"))
-                .font(.system(.subheadline, design: .rounded))
-                .padding(.bottom)
-
             HStack {
                 Text(NSLocalizedString("High", comment: "High"))
                     .font(.system(.headline, design: .rounded))
                     .padding(10)
-                    .background(priority == .high ? Color.red : Color(.systemGray4))
+                    .background(todoViewModel.priority == .high ? Color.red : Color(.systemGray4))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .onTapGesture {
-                        self.priority = .high
+                        todoViewModel.priority = .high
                     }
 
                 Text(NSLocalizedString("Normal", comment: "Normal"))
                     .font(.system(.headline, design: .rounded))
                     .padding(10)
-                    .background(priority == .normal ? Color.orange : Color(.systemGray4))
+                    .background(todoViewModel.priority == .normal ? Color.orange : Color(.systemGray4))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .onTapGesture {
-                        self.priority = .normal
+                        todoViewModel.priority = .normal
                     }
 
                 Text(NSLocalizedString("Low", comment: "Low"))
                     .font(.system(.headline, design: .rounded))
                     .padding(10)
-                    .background(priority == .low ? Color.green : Color(.systemGray4))
+                    .background(todoViewModel.priority == .low ? Color.green : Color(.systemGray4))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .onTapGesture {
-                        self.priority = .low
+                        todoViewModel.priority = .low
                     }
             }
             .padding(.bottom, 30)
             // DONE BUTTON
             Button(action: {
-                if self.name.trimmingCharacters(in: .whitespaces) == "" {
+                if todoViewModel.name
+                    .trimmingCharacters(in: .whitespaces) == "" {
                     return
                 }
-                self.showAddTodoView = false
-                addTodo(priority: self.priority, name: self.name, category: self.categoryTypes[selectedCategory])
+                addTodo(category: self.categoryTypes[selectedCategory])
+                dismiss()
             }, label: {
-                Text(NSLocalizedString("Done", comment: "Done"))
+                Text(NSLocalizedString("Done", comment: "Done").uppercased())
                     .font(.system(.headline, design: .rounded))
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
@@ -105,12 +115,13 @@ struct AddTodoView: View {
 
     // MARK: - METHODS
     /// Insert a new record into the database
-    private func addTodo(priority: Priority, name: String , category: Category) {
+    private func addTodo(category: Category) {
         let task = Todo(context: context)
         task.id = UUID()
-        task.priority = priority
-        task.name = name
-        task.category = category.rawValue
+        task.priority = todoViewModel.priority
+        task.name = todoViewModel.name
+        todoViewModel.category = category.rawValue
+        task.category = todoViewModel.category
 
         do {
             try context.save()

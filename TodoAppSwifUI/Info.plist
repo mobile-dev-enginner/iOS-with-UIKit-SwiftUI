@@ -52,5 +52,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>UIAppFonts</key>
+        <array>
+            <string>Nunito-Italic-VariableFont_wght.ttf</string>
+            <string>Nunito-VariableFont_wght.ttf</string>
+            <string>Nunito-Bold.ttf</string>
+            <string>Nunito-Regular.ttf</string>
+        </array>
 </dict>
 </plist>

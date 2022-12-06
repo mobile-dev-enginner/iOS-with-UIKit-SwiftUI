@@ -63,9 +63,7 @@ struct TodoListView: View {
                     Text(NSLocalizedString("Add", comment: "Add"))
                 })
                     .sheet(isPresented: $showNewTodo) {
-                        AddTodoView(
-                            showAddTodoView: $showNewTodo, name: "", priority: .normal, category: .family
-                        )
+                        AddTodoView()
                     },
             trailing: EditButton())
         }

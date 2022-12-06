@@ -19,6 +19,12 @@
 		4DBAD28B26AF38AE0057A5FF /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */; };
 		4DBAD28D26AF38B90057A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAD28C26AF38B90057A5FF /* Assets.xcassets */; };
 		4DBAD29026AF38B90057A5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */; };
+		4DFEC107293F4B0900590ED0 /* Nunito-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEC103293F4B0900590ED0 /* Nunito-VariableFont_wght.ttf */; };
+		4DFEC108293F4B0900590ED0 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEC104293F4B0900590ED0 /* Nunito-Regular.ttf */; };
+		4DFEC109293F4B0900590ED0 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEC105293F4B0900590ED0 /* Nunito-Bold.ttf */; };
+		4DFEC10A293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEC106293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf */; };
+		4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC10D293F4DDC00590ED0 /* Forms.swift */; };
+		4DFEC110293F547E00590ED0 /* TodoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		4DBAD28C26AF38B90057A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DBAD29126AF38B90057A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFEC103293F4B0900590ED0 /* Nunito-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4DFEC104293F4B0900590ED0 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		4DFEC105293F4B0900590ED0 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		4DFEC106293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4DFEC10D293F4DDC00590ED0 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
+		4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +61,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4DA12B9E293F0474007A45B7 /* Components */ = {
+		4DA12B9E293F0474007A45B7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				4DA12B9C293EFC06007A45B7 /* SearchBar.swift */,
+				4DFEC10D293F4DDC00590ED0 /* Forms.swift */,
 			);
-			path = Components;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		4DB94E0F293E4D7E007C8064 /* Model */ = {
@@ -114,7 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				4DBAD28826AF38AE0057A5FF /* TodoAppSwifUIApp.swift */,
-				4DA12B9E293F0474007A45B7 /* Components */,
+				4DFEC111293F548700590ED0 /* ViewModel */,
+				4DFEC10C293F4B1F00590ED0 /* Resources */,
+				4DA12B9E293F0474007A45B7 /* Utils */,
 				4DB94E18293E89E4007C8064 /* Data */,
 				4DB94E10293E4D9E007C8064 /* View */,
 				4DB94E0F293E4D7E007C8064 /* Model */,
@@ -131,6 +146,33 @@
 				4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DFEC10B293F4B0F00590ED0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEC105293F4B0900590ED0 /* Nunito-Bold.ttf */,
+				4DFEC106293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf */,
+				4DFEC104293F4B0900590ED0 /* Nunito-Regular.ttf */,
+				4DFEC103293F4B0900590ED0 /* Nunito-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4DFEC10C293F4B1F00590ED0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEC10B293F4B0F00590ED0 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DFEC111293F548700590ED0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DBAD29026AF38B90057A5FF /* Preview Assets.xcassets in Resources */,
+				4DFEC109293F4B0900590ED0 /* Nunito-Bold.ttf in Resources */,
+				4DFEC107293F4B0900590ED0 /* Nunito-VariableFont_wght.ttf in Resources */,
+				4DFEC108293F4B0900590ED0 /* Nunito-Regular.ttf in Resources */,
+				4DFEC10A293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf in Resources */,
 				4DBAD28D26AF38B90057A5FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +254,9 @@
 				4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */,
 				4DBAD28926AF38AE0057A5FF /* TodoAppSwifUIApp.swift in Sources */,
 				4DB94E0C293E3DC3007C8064 /* TodoItemDetailView.swift in Sources */,
+				4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */,
 				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
+				4DFEC110293F547E00590ED0 /* TodoFormViewModel.swift in Sources */,
 				4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */,
 				4DB94E0A293E3BCA007C8064 /* TodoListRowView.swift in Sources */,
 				4DB94E15293E56ED007C8064 /* Todo.xcdatamodeld in Sources */,
