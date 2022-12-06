@@ -13,7 +13,8 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Todo")
+//        container = NSPersistentContainer(name: "Todo")
+        container = NSPersistentCloudKitContainer(name: "Todo")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -23,6 +24,9 @@ struct PersistenceController {
                 fatalError("unresolved error: \(error), \(error.userInfo)")
             }
         })
+        // Manages changes
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
     }
 
     // TODO: Remove it before move to production
@@ -34,6 +38,7 @@ struct PersistenceController {
         for i in 0..<7 {
             let newTodo = Todo(context: context)
             newTodo.id = UUID()
+            newTodo.priority = .normal
             newTodo.name = "Todo item #\(i)"
             newTodo.category = "family"
         }

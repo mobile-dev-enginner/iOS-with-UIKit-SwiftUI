@@ -58,7 +58,7 @@ struct TodoListView: View {
                 })
                     .sheet(isPresented: $showNewTodo) {
                         AddTodoView(
-                            showAddTodoView: $showNewTodo, name: "", category: .family
+                            showAddTodoView: $showNewTodo, name: "", priority: .normal, category: .family
                         )
                     },
             trailing: EditButton())
@@ -66,7 +66,8 @@ struct TodoListView: View {
     }
     // MARK: - METHODS
     private func updateTodo(todo: FetchedResults<Todo>.Element) {
-        todo.name = "🤪"
+        todo.name = "Complete 🤪"
+        todo.priority = .low
         do {
             try viewContext.save()
         } catch {

@@ -17,6 +17,22 @@ struct TodoListRowView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(todo.name)
+            Spacer()
+            Circle()
+                .frame(width: 15, height: 15)
+                .foregroundColor(
+                    self.color(for: self.todo.priority))
+        }
+    }
+    // MARK: - METHODS
+    private func color(for priority: Priority) -> Color {
+        switch priority {
+        case .low:
+            return .green
+        case .normal:
+            return .orange
+        case .high:
+            return .red
         }
     }
 }
