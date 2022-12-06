@@ -22,7 +22,7 @@ struct MainView: View {
                         systemImage: "checklist")
                 }.tag(0)
             // The Github's Users discover list tab
-            Text("Discover")
+            GithubUsersListView()
                 .tabItem {
                     Label(
                         NSLocalizedString("Discover", comment: "Discover tab label"),

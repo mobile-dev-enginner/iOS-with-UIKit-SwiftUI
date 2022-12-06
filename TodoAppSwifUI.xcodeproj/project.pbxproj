@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,11 @@
 		4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC10D293F4DDC00590ED0 /* Forms.swift */; };
 		4DFEC110293F547E00590ED0 /* TodoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */; };
 		4DFEC113293F922F00590ED0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC112293F922F00590ED0 /* MainView.swift */; };
+		4DFEC115293FA99C00590ED0 /* GithubUsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC114293FA99C00590ED0 /* GithubUsersListView.swift */; };
+		4DFEC118293FB34500590ED0 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFEC117293FB34500590ED0 /* URLImage */; };
+		4DFEC11A293FB7D300590ED0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC119293FB7D300590ED0 /* APIConstants.swift */; };
+		4DFEC11C293FB95500590ED0 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC11B293FB95500590ED0 /* GithubUser.swift */; };
+		4DFEC11E293FBA4B00590ED0 /* GithubUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC11D293FBA4B00590ED0 /* GithubUserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,10 @@
 		4DFEC10D293F4DDC00590ED0 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormViewModel.swift; sourceTree = "<group>"; };
 		4DFEC112293F922F00590ED0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4DFEC114293FA99C00590ED0 /* GithubUsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersListView.swift; sourceTree = "<group>"; };
+		4DFEC119293FB7D300590ED0 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		4DFEC11B293FB95500590ED0 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		4DFEC11D293FBA4B00590ED0 /* GithubUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFEC118293FB34500590ED0 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB94E05293E2D53007C8064 /* Todo.swift */,
+				4DFEC11B293FB95500590ED0 /* GithubUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */,
+				4DFEC114293FA99C00590ED0 /* GithubUsersListView.swift */,
 				4DFEC112293F922F00590ED0 /* MainView.swift */,
 				4DB94E03293E26BF007C8064 /* AddTodoView.swift */,
 				4DB94E07293E3690007C8064 /* NoDataView.swift */,
@@ -97,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4DB94E19293E89F1007C8064 /* coreData */,
+				4DFEC11F293FBA9A00590ED0 /* api */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -178,6 +191,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4DFEC11F293FBA9A00590ED0 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEC119293FB7D300590ED0 /* APIConstants.swift */,
+				4DFEC11D293FBA4B00590ED0 /* GithubUserRequest.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,6 +216,9 @@
 			dependencies = (
 			);
 			name = TodoAppSwifUI;
+			packageProductDependencies = (
+				4DFEC117293FB34500590ED0 /* URLImage */,
+			);
 			productName = TodoAppSwifUI;
 			productReference = 4DBAD28526AF38AE0057A5FF /* TodoAppSwifUI.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 4DBAD27C26AF38AE0057A5FF;
+			packageReferences = (
+				4DFEC116293FB34400590ED0 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 4DBAD28626AF38AE0057A5FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFEC115293FA99C00590ED0 /* GithubUsersListView.swift in Sources */,
+				4DFEC11E293FBA4B00590ED0 /* GithubUserRequest.swift in Sources */,
 				4DB94E17293E5796007C8064 /* Persistence.swift in Sources */,
 				4DFEC113293F922F00590ED0 /* MainView.swift in Sources */,
 				4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */,
@@ -261,7 +291,9 @@
 				4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */,
 				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
 				4DFEC110293F547E00590ED0 /* TodoFormViewModel.swift in Sources */,
+				4DFEC11A293FB7D300590ED0 /* APIConstants.swift in Sources */,
 				4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */,
+				4DFEC11C293FB95500590ED0 /* GithubUser.swift in Sources */,
 				4DB94E0A293E3BCA007C8064 /* TodoListRowView.swift in Sources */,
 				4DB94E15293E56ED007C8064 /* Todo.xcdatamodeld in Sources */,
 			);
@@ -452,6 +484,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DFEC116293FB34400590ED0 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DFEC117293FB34500590ED0 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DFEC116293FB34400590ED0 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4DB94E13293E56ED007C8064 /* Todo.xcdatamodeld */ = {
