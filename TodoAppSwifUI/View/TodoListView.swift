@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 /// The app's main view
 struct TodoListView: View {
-    // MARK: - STATES, PROPERTY WRAPPER
+    // MARK: - PROPERTY WRAPPER
     @Environment(\.managedObjectContext) var viewContext
 
     @FetchRequest(
@@ -17,6 +17,7 @@ struct TodoListView: View {
         sortDescriptors: [ NSSortDescriptor(keyPath: \Todo.category, ascending: false) ])
     var todos: FetchedResults<Todo>
 
+    // MARK: - STATE VARIABLES
     @State private var searchText = ""
     @State private var showNewTodo = false
 
@@ -28,49 +29,54 @@ struct TodoListView: View {
                 // The search bar
                 SearchBar(text: $searchText)
                     .padding(.top, -10)
-                // If there is no data, show an empty view
-                if todos.count == 0 {
-                    NoDataView()
-                }
                 // The todo list
                 List {
-                    ForEach(todos.filter({
-                        searchText.isEmpty ? true : $0.name.contains(searchText)
-                    })) { todo in
-                        // When an item is tapped
-                        NavigationLink(destination: VStack {
-                            TodoItemDetailView(todo: todo)
-                        })
-                        {
-                            TodoListRowView(todo: todo)
-                                .onLongPressGesture(perform: {
-                                    updateTodo(todo: todo)
-                                })
+                    // If there is no data, show an empty view
+                    if todos.count == 0 {
+                        NoDataView()
+                    } else {
+                        ForEach(todos.filter({
+                            searchText.isEmpty ? true : $0.name.contains(searchText)
+                        })) { todo in
+                            // When an item is tapped
+                            NavigationLink(destination: VStack {
+                                TodoItemDetailView(todo: todo)
+                            })
+                            {
+                                TodoListRowView(todo: todo)
+                                // When an item is long tapped
+                                    .onLongPressGesture(perform: {
+                                        updateTodo(todo: todo)
+                                    })
+                            }
                         }
+                        // Deleting a Todo item
+                        .onDelete(perform: deleteTodo)
                     }
-                    // Deleting a Todo item
-                    .onDelete(perform: deleteTodo)
                 }
                 .rotation3DEffect(Angle(degrees: showNewTodo ? 5 : 0), axis: (x: 1, y: 0, z: 0))
                 .offset(y: showNewTodo ? -50 : 0)
                 .animation(.easeOut, value: showNewTodo)
             }
-            .navigationBarTitle(NSLocalizedString("Todo Items", comment: "Todo Items Label"))
-            .navigationBarItems(
-                leading: Button(action: {
-                    self.showNewTodo.toggle()
-                }, label: {
-                    Text(NSLocalizedString("Add", comment: "Add"))
-                })
-                    .sheet(isPresented: $showNewTodo) {
-                        AddTodoView()
-                    },
-            trailing: EditButton())
+            .navigationTitle(NSLocalizedString("Todo Items", comment: "Todo Items Label"))
+            .navigationBarTitleDisplayMode(.automatic)
+            .toolbar { // The toolbar for users to open the AddTodoView view
+                Button(action: {
+                    self.showNewTodo = true
+                }) {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .accentColor(Color("AccentColor"))
+        .sheet(isPresented: $showNewTodo) {
+            AddTodoView()
         }
     }
     // MARK: - METHODS
+    /// Update an exist record in the database
     private func updateTodo(todo: FetchedResults<Todo>.Element) {
-        todo.name = "Complete 🤪"
+        todo.name = "Completed 🤪"
         todo.priority = .low
         do {
             try viewContext.save()
@@ -78,6 +84,7 @@ struct TodoListView: View {
             print(error)
         }
     }
+    /// Delete a exist record in the database
     private func deleteTodo(offsets : IndexSet) {
         for i in offsets {
             let todo = todos[i]

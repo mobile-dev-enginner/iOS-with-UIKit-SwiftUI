@@ -25,6 +25,7 @@
 		4DFEC10A293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEC106293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf */; };
 		4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC10D293F4DDC00590ED0 /* Forms.swift */; };
 		4DFEC110293F547E00590ED0 /* TodoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */; };
+		4DFEC113293F922F00590ED0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC112293F922F00590ED0 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		4DFEC106293F4B0900590ED0 /* Nunito-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		4DFEC10D293F4DDC00590ED0 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormViewModel.swift; sourceTree = "<group>"; };
+		4DFEC112293F922F00590ED0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */,
+				4DFEC112293F922F00590ED0 /* MainView.swift */,
 				4DB94E03293E26BF007C8064 /* AddTodoView.swift */,
 				4DB94E07293E3690007C8064 /* NoDataView.swift */,
 				4DB94E09293E3BCA007C8064 /* TodoListRowView.swift */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB94E17293E5796007C8064 /* Persistence.swift in Sources */,
+				4DFEC113293F922F00590ED0 /* MainView.swift in Sources */,
 				4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */,
 				4DBAD28B26AF38AE0057A5FF /* TodoListView.swift in Sources */,
 				4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */,

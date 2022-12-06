@@ -29,9 +29,9 @@ struct AddTodoView: View {
     // MARK: - SOME SORT OF VIEW
     var body: some View {
         VStack {
-            Text(NSLocalizedString("Add Todo", comment: "Add Todo Label"))
+            Text(NSLocalizedString("Add To-do", comment: "Add To-do Label"))
                 .font(.largeTitle)
-                .foregroundColor(Color.accentColor)
+                .foregroundColor(Color("AccentColor"))
                 .padding()
             VStack(alignment: .leading) {
                 // INPUT TEXT

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct TodoItemDetailView: View {
+    // MARK: - PROPERTY WRAPPER
     @ObservedObject var todo: Todo
+
     // MARK: - SOME SORT OF VIEW
     var body: some View {
         Text(todo.name)

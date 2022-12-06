@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TodoListRowView: View {
+    // MARK: - PROPERTY WRAPPER
     @Environment(\.managedObjectContext) var context
     @ObservedObject var todo: Todo
+    
     // MARK: - SOME SORT OF VIEW
     var body: some View {
         HStack {
