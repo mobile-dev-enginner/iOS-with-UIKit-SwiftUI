@@ -6,5 +6,5 @@
 //
 
 enum APIConstants {
-    static let host = "https://api.github.com/search/users?q=DevOpsThinh"
+    static let github_url = "https://api.github.com/search/users?q="
 }

@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+/// A `TodoFormViewModel` class type that conform to `ObservableObject` protocol
 /// A view model to pair with the AddTodoView view
 class TodoFormViewModel: ObservableObject {
     // MARK: - DATA ENTRY

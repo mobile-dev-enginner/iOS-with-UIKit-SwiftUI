@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA12B9C293EFC06007A45B7 /* SearchBar.swift */; };
+		4DB1E0B6294035F000E1CA8D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1E0B5294035F000E1CA8D /* NetworkError.swift */; };
+		4DB1E0B82940461D00E1CA8D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1E0B72940461D00E1CA8D /* SearchBarView.swift */; };
 		4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E03293E26BF007C8064 /* AddTodoView.swift */; };
 		4DB94E06293E2D53007C8064 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E05293E2D53007C8064 /* Todo.swift */; };
 		4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB94E07293E3690007C8064 /* NoDataView.swift */; };
@@ -30,11 +32,13 @@
 		4DFEC118293FB34500590ED0 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFEC117293FB34500590ED0 /* URLImage */; };
 		4DFEC11A293FB7D300590ED0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC119293FB7D300590ED0 /* APIConstants.swift */; };
 		4DFEC11C293FB95500590ED0 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC11B293FB95500590ED0 /* GithubUser.swift */; };
-		4DFEC11E293FBA4B00590ED0 /* GithubUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC11D293FBA4B00590ED0 /* GithubUserRequest.swift */; };
+		4DFEC11E293FBA4B00590ED0 /* GithubUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEC11D293FBA4B00590ED0 /* GithubUserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DA12B9C293EFC06007A45B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4DB1E0B5294035F000E1CA8D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4DB1E0B72940461D00E1CA8D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4DB94E03293E26BF007C8064 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		4DB94E05293E2D53007C8064 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4DB94E07293E3690007C8064 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
@@ -58,7 +62,7 @@
 		4DFEC114293FA99C00590ED0 /* GithubUsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersListView.swift; sourceTree = "<group>"; };
 		4DFEC119293FB7D300590ED0 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		4DFEC11B293FB95500590ED0 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
-		4DFEC11D293FBA4B00590ED0 /* GithubUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserRequest.swift; sourceTree = "<group>"; };
+		4DFEC11D293FBA4B00590ED0 /* GithubUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +98,12 @@
 		4DB94E10293E4D9E007C8064 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */,
+				4DB94E03293E26BF007C8064 /* AddTodoView.swift */,
 				4DFEC114293FA99C00590ED0 /* GithubUsersListView.swift */,
 				4DFEC112293F922F00590ED0 /* MainView.swift */,
-				4DB94E03293E26BF007C8064 /* AddTodoView.swift */,
 				4DB94E07293E3690007C8064 /* NoDataView.swift */,
+				4DB1E0B72940461D00E1CA8D /* SearchBarView.swift */,
+				4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */,
 				4DB94E09293E3BCA007C8064 /* TodoListRowView.swift */,
 				4DB94E0B293E3DC3007C8064 /* TodoItemDetailView.swift */,
 			);
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFEC10F293F547E00590ED0 /* TodoFormViewModel.swift */,
+				4DFEC11D293FBA4B00590ED0 /* GithubUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFEC119293FB7D300590ED0 /* APIConstants.swift */,
-				4DFEC11D293FBA4B00590ED0 /* GithubUserRequest.swift */,
+				4DB1E0B5294035F000E1CA8D /* NetworkError.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -280,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFEC115293FA99C00590ED0 /* GithubUsersListView.swift in Sources */,
-				4DFEC11E293FBA4B00590ED0 /* GithubUserRequest.swift in Sources */,
+				4DFEC11E293FBA4B00590ED0 /* GithubUserViewModel.swift in Sources */,
 				4DB94E17293E5796007C8064 /* Persistence.swift in Sources */,
 				4DFEC113293F922F00590ED0 /* MainView.swift in Sources */,
 				4DB94E08293E3690007C8064 /* NoDataView.swift in Sources */,
@@ -291,9 +297,11 @@
 				4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */,
 				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
 				4DFEC110293F547E00590ED0 /* TodoFormViewModel.swift in Sources */,
+				4DB1E0B82940461D00E1CA8D /* SearchBarView.swift in Sources */,
 				4DFEC11A293FB7D300590ED0 /* APIConstants.swift in Sources */,
 				4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */,
 				4DFEC11C293FB95500590ED0 /* GithubUser.swift in Sources */,
+				4DB1E0B6294035F000E1CA8D /* NetworkError.swift in Sources */,
 				4DB94E0A293E3BCA007C8064 /* TodoListRowView.swift in Sources */,
 				4DB94E15293E56ED007C8064 /* Todo.xcdatamodeld in Sources */,
 			);

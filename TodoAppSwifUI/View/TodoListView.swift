@@ -27,8 +27,8 @@ struct TodoListView: View {
         NavigationView {
             VStack {
                 // The search bar
-                SearchBar(text: $searchText)
-                    .padding(.top, -10)
+                SearchBarView(text: $searchText)
+                    .padding([.leading, .trailing], 8)
                 // The todo list
                 List {
                     // If there is no data, show an empty view
@@ -64,7 +64,9 @@ struct TodoListView: View {
                 Button(action: {
                     self.showNewTodo = true
                 }) {
-                    Image(systemName: "plus")
+                    Image(systemName: "plus.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.purple)
                 }
             }
         }
