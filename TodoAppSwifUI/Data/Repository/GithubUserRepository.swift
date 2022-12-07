@@ -1,5 +1,5 @@
 //
-//  GithubUserViewModel.swift
+//  GithubUserRepository.swift
 //  TodoAppSwifUI
 //
 //  Created by Nguyễn Trường Thịnh on 07/12/2022.
@@ -7,9 +7,8 @@
 
 import Foundation
 
-/// A `GihubUserViewModel` final class type that conform to `ObservableObject` protocol
-/// A view model to pair with the GithubUsersListView view
-final class GithubUserViewModel: ObservableObject {
+/// A `GithubUserRepository` final class type that conform to `ObservableObject` protocol
+final class GithubUserRepository: ObservableObject {
     @Published var items = [GithubUser]()
 
     /// Get the user data from the Github RESTful API

@@ -29,7 +29,7 @@ public class Todo: NSManagedObject {
 }
 /// A `Todo` extension that conform to `Identifiable` protocol
 extension Todo: Identifiable {
-    /// A computed property for rating for a way to birdge between `priority` & `priorityNum`
+    /// A computed property for `priority` for a way to birdge between `priority` & `priorityNum`
     var priority: Priority {
         // Convert the priorityNum back to an enum case
         get {

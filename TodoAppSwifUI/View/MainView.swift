@@ -28,13 +28,20 @@ struct MainView: View {
                         NSLocalizedString("Discover", comment: "Discover tab label"),
                         systemImage: "person.icloud")
                 }.tag(1)
+            // The Favorites list tab
+            FavoritesListView()
+                .tabItem {
+                    Label(
+                        NSLocalizedString("Favorites", comment: "Favorites tab label"),
+                        systemImage: "star.square.fill")
+                }.tag(2)
             // The About - Info tab
             Text("About")
                 .tabItem {
                     Label(
                         NSLocalizedString("About", comment: "About tab label"),
                         systemImage: "wand.and.rays")
-                }.tag(2)
+                }.tag(3)
         }
         .accentColor(Color("NavigationBarTitle"))
     }

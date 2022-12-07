@@ -18,3 +18,4 @@ struct GithubUser: Codable {
     public var avatar_url: String
     public var html_url: String
 }
+

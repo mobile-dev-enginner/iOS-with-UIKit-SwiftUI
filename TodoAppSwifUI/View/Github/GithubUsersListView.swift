@@ -10,15 +10,15 @@ import URLImage
 
 struct GithubUsersListView: View {
     // MARK: - PROPERTY WRAPPER
-    @ObservedObject private var githubUserViewModel: GithubUserViewModel
+    @ObservedObject private var userRepo: GithubUserRepository
 
     // MARK: - STATE VARIABLES
     @State private var searchText = "DevOpsThinh"
 
     // MARK: - INITIALIZERS
         init() {
-            let viewModel = GithubUserViewModel()
-            githubUserViewModel = viewModel
+            let repository = GithubUserRepository()
+            userRepo = repository
         }
 
     // MARK: - SOME SORT OF VIEW
@@ -30,9 +30,9 @@ struct GithubUsersListView: View {
                     .padding(.top, -10)
                 Spacer()
                 // If there is no data, show a loader indicator view
-                if githubUserViewModel.items.count == 0 {
+                if userRepo.items.count == 0 {
                     ProgressView().onAppear() {
-                        githubUserViewModel.getUser(searchTerm: searchText)
+                        userRepo.getUser(searchTerm: searchText)
                     }
                 } else {
                     // The Users Filtered List
@@ -49,20 +49,21 @@ struct GithubUsersListView: View {
 }
 
 struct FilteredList: View {
-    @ObservedObject private var viewModel = GithubUserViewModel()
+    @ObservedObject private var repo = GithubUserRepository()
+    @ObservedObject var favoritesRepo: FavoritesRepository = FavoritesRepository()
 
     @Binding var searchText: String
 
     init(_ searchText: Binding<String>) {
         self._searchText = searchText
-        viewModel.getUser(searchTerm: self.searchText)
+        repo.getUser(searchTerm: self.searchText)
     }
 
     var body: some View {
 
         ZStack {
             // The Github users list
-            List(viewModel.items, id: \.login) { user in
+            List(repo.items, id: \.login) { user in
                 Link(destination: URL(string: user.html_url)!) {
                     HStack (alignment: .top) {
                         URLImage(URL(string: user.avatar_url)!) { image in
@@ -78,9 +79,13 @@ struct FilteredList: View {
                         }
                     }
                 }
+                // When an item is long tapped: add it to firebase firestore
+                .onLongPressGesture(perform: {
+                    favoritesRepo.addToFavorites(login: user.login, url: user.url, avatar_url: user.avatar_url, html_url: user.html_url)
+                })
             }
 
-            if viewModel.items.count == 0 {
+            if repo.items.count == 0 {
                 NoDataView()
             }
         }
