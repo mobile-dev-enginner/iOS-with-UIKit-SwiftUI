@@ -27,8 +27,7 @@ struct GithubUsersListView: View {
             VStack {
                 // The search bar view
                 SearchBar(text: $searchText)
-                    .padding(.top, -10)
-                Spacer()
+                    .padding(.top, -8)
                 // If there is no data, show a loader indicator view
                 if userRepo.items.count == 0 {
                     ProgressView().onAppear() {
@@ -40,6 +39,12 @@ struct GithubUsersListView: View {
                 }
 
                 Spacer()
+                // Notes - hint
+                Text(NSLocalizedString("When an item is long-tapped will be added to the favorites", comment: "When an item is long-tapped will be added to the favorites"))
+                    .font(.system(.footnote, design: .rounded))
+                    .foregroundColor(Color(.darkGray))
+                    .lineLimit(3)
+                    .padding(.bottom, 10)
             }
             .navigationTitle(NSLocalizedString("Github Users", comment: "Github Users Label"))
             .navigationBarTitleDisplayMode(.automatic)
@@ -50,7 +55,7 @@ struct GithubUsersListView: View {
 
 struct FilteredList: View {
     @ObservedObject private var repo = GithubUserRepository()
-    @ObservedObject var favoritesRepo: FavoritesRepository = FavoritesRepository()
+    @ObservedObject private var favoritesRepo = FavoritesRepository()
 
     @Binding var searchText: String
 

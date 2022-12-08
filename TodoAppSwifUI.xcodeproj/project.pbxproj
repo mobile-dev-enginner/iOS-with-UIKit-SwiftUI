@@ -112,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				4DFEC114293FA99C00590ED0 /* GithubUsersListView.swift */,
-				4D58C7442940DB7000473FF8 /* FavoritesListView.swift */,
-				4D58C7462940E0A300473FF8 /* FavoriteItemDetailView.swift */,
 			);
 			path = Github;
 			sourceTree = "<group>";
@@ -125,6 +123,15 @@
 				4D58C7412940D89900473FF8 /* FavoritesRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		4D9879942941B833002010FA /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				4D58C7442940DB7000473FF8 /* FavoritesListView.swift */,
+				4D58C7462940E0A300473FF8 /* FavoriteItemDetailView.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		4DA12B9E293F0474007A45B7 /* Utils */ = {
@@ -148,6 +155,7 @@
 		4DB94E10293E4D9E007C8064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D9879942941B833002010FA /* Favorite */,
 				4D58C73F2940C07700473FF8 /* Todo */,
 				4D58C7402940C09500473FF8 /* Github */,
 				4DFEC112293F922F00590ED0 /* MainView.swift */,

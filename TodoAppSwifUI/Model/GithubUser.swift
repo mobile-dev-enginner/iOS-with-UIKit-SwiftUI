@@ -13,9 +13,22 @@ struct Result: Codable {
 }
 /// A `GithubUser` struct type with the properties that we want from the JSON results
 struct GithubUser: Codable {
+    public var node_id: String
     public var login: String
     public var url: String
     public var avatar_url: String
     public var html_url: String
+}
+/// A `GithubUser` extension that conform to `Identifiable` protocol
+extension GithubUser: Identifiable {
+    /// A computed property for `id` for a way to birdge between `id` & `node_id`
+    var id: String {
+        get {
+            return node_id
+        }
+        set {
+            self.node_id = newValue
+        }
+    }
 }
 

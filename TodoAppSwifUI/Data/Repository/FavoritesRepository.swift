@@ -41,7 +41,7 @@ final class FavoritesRepository: ObservableObject {
                       let html_url = data["html_url"] as? String else {
                           return nil
                       }
-                return GithubUser(login: userName, url: url, avatar_url: avatar_url, html_url: html_url)
+                return GithubUser(node_id: doc.documentID, login: userName, url: url, avatar_url: avatar_url, html_url: html_url)
             }
         }
     }
@@ -57,8 +57,8 @@ final class FavoritesRepository: ObservableObject {
         loadFavorites()
     }
     /// Update an exist Github's user in github-users favorites collection
-    func updateUser(login: String, url: String, avatar_url: String, html_url: String) {
-        db.collection("github-users").document(login).updateData([
+    func updateUser(id: String, login: String, url: String, avatar_url: String, html_url: String) {
+        db.collection("github-users").document(id).updateData([
             "username": login,
             "url": url,
             "avatar_url": avatar_url,
@@ -76,7 +76,7 @@ final class FavoritesRepository: ObservableObject {
     /// Delete a Github's users from github-users favorites collection
     func remove(at index: Int) {
         let userToDelete = users[index]
-        db.collection("github-users").document(userToDelete.login).delete()
+        db.collection("github-users").document(userToDelete.id).delete()
         // Load all the users again to reflect the change
         loadFavorites()
     }

@@ -12,28 +12,32 @@ struct FavoriteItemDetailView: View {
     // MARK: - PROPERTY WRAPPER
     @Environment(\.dismiss) var dismiss
 
+    // MARK: - STATE VARIABLES
     @State var login: String = ""
     @State var url: String = ""
     @State var avatar_url: String = ""
     @State var html_url: String = ""
 
+    var id: String = ""
     var repository: FavoritesRepository
     
     var body: some View {
         VStack {
             URLImage(URL(string: avatar_url)!) { image in
-                image.resizable().frame(width: 120, height: 120)
+                image.resizable().scaledToFit()
             }
-            TextField(NSLocalizedString("Username", comment: "Username label"), text: $login)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField(NSLocalizedString("API URL", comment: "API URL"), text: $url)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField(NSLocalizedString("Website URL", comment: "Website URL"), text: $html_url)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding(.top, 5)
+
+            VStack {
+                FormTextView(value: $login, label: "Username")
+                FormTextView(value: $url, label: "API url")
+                FormTextView(value: $html_url, label: "Website url")
+            }
+            .padding(.bottom, 8)
         }
         .navigationBarTitle(NSLocalizedString("Update User", comment: "Update Favorite User"), displayMode: .inline)
         .navigationBarItems(trailing: Button {
-            repository.updateUser(login: login, url: url, avatar_url: avatar_url, html_url: html_url)
+            repository.updateUser(id: id, login: login, url: url, avatar_url: avatar_url, html_url: html_url)
             dismiss()
         } label: {
             Image(systemName: "checkmark")

@@ -29,6 +29,7 @@ struct TodoListView: View {
                 // The search bar
                 SearchBarView(text: $searchText)
                     .padding([.leading, .trailing], 8)
+                    .padding(.bottom, 10)
                 // The todo list
                 List {
                     // If there is no data, show an empty view
@@ -57,6 +58,8 @@ struct TodoListView: View {
                 .rotation3DEffect(Angle(degrees: showNewTodo ? 5 : 0), axis: (x: 1, y: 0, z: 0))
                 .offset(y: showNewTodo ? -50 : 0)
                 .animation(.easeOut, value: showNewTodo)
+
+                Spacer()
             }
             .navigationTitle(NSLocalizedString("Todo Items", comment: "Todo Items Label"))
             .navigationBarTitleDisplayMode(.automatic)
