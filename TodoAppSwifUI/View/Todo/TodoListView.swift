@@ -87,7 +87,7 @@ struct TodoListView: View {
     // MARK: - METHODS
     /// Update an exist record in the database
     private func updateTodo(todo: FetchedResults<Todo>.Element) {
-        todo.name = "Completed 🤪"
+        todo.name = NSLocalizedString("Completed 🤪", comment: "Completed 🤪")
         todo.priority = .low
         do {
             try viewContext.save()

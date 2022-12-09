@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import TutorialAbout
 
 struct MainView: View {
     // MARK: - STATE VARIABLES
     @State private var selectedTabIndex = 0
+
+    private var aboutItems: [AboutModel] {
+        [
+            AboutModel(category: .improvement, title: "Rate us on GitHub Stars", iconName: "star", url: .rateUs),
+            AboutModel(category: .improvement, title: "Tell us your feedback", iconName: "chat", url: .feedback),
+            AboutModel(category: .improvement, title: "Discover us on GitHub Profile", iconName: "github", url: .github),
+            AboutModel(category: .social, title: "Twitter", iconName: "twitter", url: .twitter),
+            AboutModel(category: .social, title: "Facebook", iconName: "facebook", url: .facebook),
+            AboutModel(category: .social, title: "Instagram", iconName: "instagram", url: .instagram)
+        ]
+    }
 
     // MARK: - SOME SORT OF VIEW
     var body: some View {
@@ -36,7 +48,7 @@ struct MainView: View {
                         systemImage: "star.square.fill")
                 }.tag(2)
             // The About - Info tab
-            Text("About")
+            AboutView(react_items: aboutItems)
                 .tabItem {
                     Label(
                         NSLocalizedString("About", comment: "About tab label"),

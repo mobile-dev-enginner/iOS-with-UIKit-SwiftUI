@@ -22,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct TodoApp: App {
     @AppStorage(AppUserDefaultsKeys.onboarding) var shouldShowOnboarding = true
-    // The model data to show the rst time of app launch.
+    // The model data to show the first time of app launch.
     var onboardings: [Onboarding] {
         [
             Onboarding(title: "WELCOME TO\nTODO", info: "Create your own To-do well done and make it into complete tasks", image: .work),
