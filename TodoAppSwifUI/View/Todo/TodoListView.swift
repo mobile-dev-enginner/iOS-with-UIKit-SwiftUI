@@ -60,6 +60,12 @@ struct TodoListView: View {
                 .animation(.easeOut, value: showNewTodo)
 
                 Spacer()
+                // Notes - hint
+                Text(NSLocalizedString("When an item is long-tapped will make it done", comment: "When an item is long-tapped will make it done"))
+                    .font(.system(.footnote, design: .rounded))
+                    .foregroundColor(Color(.darkGray))
+                    .lineLimit(3)
+                    .padding(.bottom, 10)
             }
             .navigationTitle(NSLocalizedString("Todo Items", comment: "Todo Items Label"))
             .navigationBarTitleDisplayMode(.automatic)
