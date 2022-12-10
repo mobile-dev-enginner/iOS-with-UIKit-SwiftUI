@@ -110,6 +110,15 @@
         }
       },
       {
+        "package": "TutorialAbout",
+        "repositoryURL": "https://github.com/DevOpsThinh/TutorialAboutPackage",
+        "state": {
+          "branch": "master",
+          "revision": "9ba6df3b6309bfef2303a66279e31d6d78a41861",
+          "version": null
+        }
+      },
+      {
         "package": "URLImage",
         "repositoryURL": "https://github.com/dmytro-anokhin/url-image",
         "state": {
