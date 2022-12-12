@@ -14,7 +14,7 @@ public class Nurture: ObservableObject {
     // MARK: - PROPERTY WRAPPER
     @Published public var items: [NurtureItem] = []
 
-    private let legacyNurture = __Nurture()  // our Objective-C feed
+    private let legacyNurture = __Nurture()  // our Objective-C nurture
 
     // MARK: - INITIALIZER
     public init() {

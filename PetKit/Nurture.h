@@ -31,7 +31,7 @@ NS_REFINED_FOR_SWIFT
 - (NSUUID * _Nullable) storeImage:(UIImage *) image NS_SWIFT_NAME(storeImage(_:));
 
 - (void) addMomentOnPresenter: (UIViewController *) presenter
-                   completion: (void (^ _Nullable)(NurtureItem *)) completion NS_SWIFT_UNAVAILABLE("Use `AddMomentView` instead");
+                   completion: (void (^ _Nullable)(NurtureItem *)) completion NS_SWIFT_UNAVAILABLE("Use `ImagePicker` instead");
 @end
 
 NS_ASSUME_NONNULL_END

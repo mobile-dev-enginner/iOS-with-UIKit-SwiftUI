@@ -79,6 +79,11 @@
 		4DBAD28B26AF38AE0057A5FF /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAD28A26AF38AE0057A5FF /* TodoListView.swift */; };
 		4DBAD28D26AF38B90057A5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAD28C26AF38B90057A5FF /* Assets.xcassets */; };
 		4DBAD29026AF38B90057A5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */; };
+		4DF8569629471EB500DDC2A6 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8569529471EB500DDC2A6 /* ImageButton.swift */; };
+		4DF8569C29471FBF00DDC2A6 /* AddNurtureItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8569829471FBF00DDC2A6 /* AddNurtureItemView.swift */; };
+		4DF8569D29471FBF00DDC2A6 /* NurtureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8569929471FBF00DDC2A6 /* NurtureRow.swift */; };
+		4DF8569E29471FBF00DDC2A6 /* NurtureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8569A29471FBF00DDC2A6 /* NurtureListView.swift */; };
+		4DF8569F29471FBF00DDC2A6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8569B29471FBF00DDC2A6 /* ImagePicker.swift */; };
 		4DFC42FA29430C5B00ABBE56 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC42F929430C5B00ABBE56 /* OnboardingButtonStyle.swift */; };
 		4DFC42FD29430FFA00ABBE56 /* AppUserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC42FC29430FFA00ABBE56 /* AppUserDefaultsKeys.swift */; };
 		4DFC42FE2943120B00ABBE56 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC42F929430C5B00ABBE56 /* OnboardingButtonStyle.swift */; };
@@ -197,6 +202,11 @@
 		4DBAD28C26AF38B90057A5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DBAD29126AF38B90057A5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DF8569529471EB500DDC2A6 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		4DF8569829471FBF00DDC2A6 /* AddNurtureItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNurtureItemView.swift; sourceTree = "<group>"; };
+		4DF8569929471FBF00DDC2A6 /* NurtureRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurtureRow.swift; sourceTree = "<group>"; };
+		4DF8569A29471FBF00DDC2A6 /* NurtureListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurtureListView.swift; sourceTree = "<group>"; };
+		4DF8569B29471FBF00DDC2A6 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4DFC42F929430C5B00ABBE56 /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		4DFC42FC29430FFA00ABBE56 /* AppUserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaultsKeys.swift; sourceTree = "<group>"; };
 		4DFEC103293F4B0900590ED0 /* Nunito-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -418,6 +428,7 @@
 				4DFEC112293F922F00590ED0 /* MainView.swift */,
 				4DB94E07293E3690007C8064 /* NoDataView.swift */,
 				4DB1E0B72940461D00E1CA8D /* SearchBarView.swift */,
+				4DF8569729471F7E00DDC2A6 /* PetTrack */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,6 +498,18 @@
 				4DBAD28F26AF38B90057A5FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DF8569729471F7E00DDC2A6 /* PetTrack */ = {
+			isa = PBXGroup;
+			children = (
+				4DF8569829471FBF00DDC2A6 /* AddNurtureItemView.swift */,
+				4DF8569B29471FBF00DDC2A6 /* ImagePicker.swift */,
+				4DF8569929471FBF00DDC2A6 /* NurtureRow.swift */,
+				4DF8569A29471FBF00DDC2A6 /* NurtureListView.swift */,
+				4DF8569529471EB500DDC2A6 /* ImageButton.swift */,
+			);
+			path = PetTrack;
 			sourceTree = "<group>";
 		};
 		4DFC42FB29430D0800ABBE56 /* Component */ = {
@@ -798,6 +821,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF8569E29471FBF00DDC2A6 /* NurtureListView.swift in Sources */,
 				4DFEC115293FA99C00590ED0 /* GithubUsersListView.swift in Sources */,
 				4D8541F02946F363002B2863 /* Bundle+Extension.swift in Sources */,
 				4DFEC11E293FBA4B00590ED0 /* GithubUserRepository.swift in Sources */,
@@ -809,12 +833,16 @@
 				4D58C7472940E0A300473FF8 /* FavoriteItemDetailView.swift in Sources */,
 				4D3AFA1A2942E6D900F18C1A /* Onboarding.swift in Sources */,
 				4D3AFA132942E3C800F18C1A /* Color+Extension.swift in Sources */,
+				4DF8569629471EB500DDC2A6 /* ImageButton.swift in Sources */,
 				4D8541EC2946F13B002B2863 /* NurtureItem+Extension.swift in Sources */,
+				4DF8569F29471FBF00DDC2A6 /* ImagePicker.swift in Sources */,
 				4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */,
 				4D3AFA212942ED9700F18C1A /* OnboardingView.swift in Sources */,
 				4DBAD28926AF38AE0057A5FF /* TodoApp.swift in Sources */,
 				4D3AFA242942F88300F18C1A /* PageView.swift in Sources */,
+				4DF8569C29471FBF00DDC2A6 /* AddNurtureItemView.swift in Sources */,
 				4DB94E0C293E3DC3007C8064 /* TodoItemDetailView.swift in Sources */,
+				4DF8569D29471FBF00DDC2A6 /* NurtureRow.swift in Sources */,
 				4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */,
 				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
 				4DFC42FD29430FFA00ABBE56 /* AppUserDefaultsKeys.swift in Sources */,

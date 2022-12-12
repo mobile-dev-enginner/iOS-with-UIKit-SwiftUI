@@ -21,6 +21,7 @@ struct FavoriteItemDetailView: View {
     var id: String = ""
     var repository: FavoritesRepository
     
+    // MARK: - SOME SORT OF VIEW
     var body: some View {
         VStack {
             URLImage(URL(string: avatar_url)!) { image in
@@ -33,7 +34,7 @@ struct FavoriteItemDetailView: View {
                 FormTextView(value: $url, label: "API url")
                 FormTextView(value: $html_url, label: "Website url")
             }
-            .padding(.bottom, 8)
+            .padding([.leading, .trailing, .bottom], 8)
         }
         .navigationBarTitle(NSLocalizedString("Update User", comment: "Update Favorite User"), displayMode: .inline)
         .navigationBarItems(trailing: Button {

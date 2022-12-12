@@ -26,34 +26,41 @@ struct MainView: View {
     // MARK: - SOME SORT OF VIEW
     var body: some View {
         TabView(selection: $selectedTabIndex) {
-            // The to-do list tab
+            // The To-do list tab
             TodoListView()
                 .tabItem {
                     Label(
                         NSLocalizedString("Todo Lists", comment: "Todo Lists tab label"),
                         systemImage: "checklist")
                 }.tag(0)
+            // The Pet track tab
+            NurtureListView()
+                .tabItem {
+                    Label(
+                        NSLocalizedString("Pet Track", comment: "Pet Track tab label"),
+                        systemImage: "pawprint.fill")
+                }.tag(1)
             // The Github's Users discover list tab
             GithubUsersListView()
                 .tabItem {
                     Label(
                         NSLocalizedString("Discover", comment: "Discover tab label"),
                         systemImage: "person.icloud")
-                }.tag(1)
+                }.tag(2)
             // The Favorites list tab
             FavoritesListView()
                 .tabItem {
                     Label(
                         NSLocalizedString("Favorites", comment: "Favorites tab label"),
                         systemImage: "star.square.fill")
-                }.tag(2)
+                }.tag(3)
             // The About - Info tab
             AboutView(react_items: aboutItems)
                 .tabItem {
                     Label(
                         NSLocalizedString("About", comment: "About tab label"),
                         systemImage: "wand.and.rays")
-                }.tag(3)
+                }.tag(4)
         }
         .accentColor(Color("NavigationBarTitle"))
     }

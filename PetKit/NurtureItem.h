@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// by the type in the first argument named as the second argument.
 /// Provide a nice way to achieve this level of granularity, using NS_SWIFT_NAME
 typedef NS_CLOSED_ENUM(NSInteger, NurtureItemKind) {
-    NurtureItemKindBottle,
+    NurtureItemKindStrenuousness,
     NurtureItemKindFood,
     NurtureItemKindSleep,
     NurtureItemKindDiaper,

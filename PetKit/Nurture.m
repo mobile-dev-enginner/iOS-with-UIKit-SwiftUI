@@ -29,14 +29,14 @@ NSString * _Nonnull const NurtureStorageFilename = @"petnurture.data";
     return self;
 }
 
-- (BOOL)babySleeping {
-    NSArray <NurtureItem *> *feed = [self loadNurtureItems];
+- (BOOL)petSleeping {
+    NSArray <NurtureItem *> *nurture = [self loadNurtureItems];
 
-    NSInteger sleepIndex = [feed indexOfObjectPassingTest:^BOOL(NurtureItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    NSInteger sleepIndex = [nurture indexOfObjectPassingTest:^BOOL(NurtureItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         return obj.kind == NurtureItemKindSleep;
   }];
 
-  NSInteger awakeIndex = [feed indexOfObjectPassingTest:^BOOL(NurtureItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+  NSInteger awakeIndex = [nurture indexOfObjectPassingTest:^BOOL(NurtureItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
       return obj.kind == NurtureItemKindAwake;
   }];
     return sleepIndex < awakeIndex;
@@ -72,7 +72,7 @@ NSString * _Nonnull const NurtureStorageFilename = @"petnurture.data";
     return result;
 }
 
-- (NurtureItem *) addFeedItemOfKind: (NurtureItemKind) kind {
+- (NurtureItem *) addNurtureItemOfKind: (NurtureItemKind) kind {
     NurtureItem *nurtureItem = [
         [NurtureItem alloc]
         initWithKind:kind

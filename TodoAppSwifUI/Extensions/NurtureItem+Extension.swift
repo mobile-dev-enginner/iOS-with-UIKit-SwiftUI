@@ -41,18 +41,18 @@ import PetKit
 extension NurtureItem.Kind {
     var title: String {
         switch self {
-        case .bottle:
-            return "Drank a bottle"
+        case .strenuousness:
+            return NSLocalizedString("Strenuousness: Run & Jump", comment: "Strenuousness: Run & Jump")
         case .food:
-            return "Ate food"
+            return NSLocalizedString("Ate food", comment: "Ate food")
         case .sleep:
-            return "Slept"
+            return NSLocalizedString("Slept", comment: "Slept")
         case .awake:
-            return "Woke up"
+            return NSLocalizedString("Woke up", comment: "Woke up")
         case .diaper:
-            return "Got a new diaper"
+            return NSLocalizedString("Got a new diaper", comment: "Got a new diaper")
         case .moment:
-            return "Captured a moment"
+            return NSLocalizedString("Captured a moment", comment: "Captured a moment")
         default:
             return ""
         }
@@ -60,10 +60,10 @@ extension NurtureItem.Kind {
 
     var emoji: String {
         switch self {
-        case .bottle:
-            return "🍼"
+        case .strenuousness:
+            return "🦮"
         case .food:
-            return "🥗"
+            return "🍖"
         case .sleep:
             return "😴"
         case .awake:
@@ -79,8 +79,8 @@ extension NurtureItem.Kind {
 
     var color: UIColor {
         switch self {
-        case .bottle:
-            return UIColor(r: 240, g: 234, b: 214)
+        case .strenuousness:
+            return UIColor(r: 240, g: 90, b: 20)
         case .food:
             return UIColor(r: 173, g: 255, b: 47)
         case .sleep, .awake:

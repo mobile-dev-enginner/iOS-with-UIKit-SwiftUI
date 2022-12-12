@@ -43,8 +43,8 @@ NSString * _Nonnull NurtureItemKindDescription(NurtureItemKind kind) {
     switch (kind) {
         case NurtureItemKindFood:
             return @"Food";
-        case NurtureItemKindBottle:
-            return @"Bottle";
+        case NurtureItemKindStrenuousness:
+            return @"Strenuousness";
         case NurtureItemKindDiaper:
             return @"Diaper";
         case NurtureItemKindSleep:
