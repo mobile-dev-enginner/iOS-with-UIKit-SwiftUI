@@ -13,8 +13,6 @@
 		4D3AFA042942E11F00F18C1A /* TutorialOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3AF9FE2942E11F00F18C1A /* TutorialOnboarding.framework */; };
 		4D3AFA052942E11F00F18C1A /* TutorialOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3AF9FE2942E11F00F18C1A /* TutorialOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D3AFA0D2942E2C000F18C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AFA0B2942E2BF00F18C1A /* Assets.xcassets */; };
-		4D3AFA102942E3B600F18C1A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AFA0F2942E3B600F18C1A /* Bundle+Extension.swift */; };
-		4D3AFA112942E3B600F18C1A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AFA0F2942E3B600F18C1A /* Bundle+Extension.swift */; };
 		4D3AFA132942E3C800F18C1A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AFA122942E3C800F18C1A /* Color+Extension.swift */; };
 		4D3AFA142942E3C800F18C1A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AFA122942E3C800F18C1A /* Color+Extension.swift */; };
 		4D3AFA162942E3DC00F18C1A /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AFA152942E3DC00F18C1A /* Image+Extension.swift */; };
@@ -49,6 +47,17 @@
 		4D6962B829444E83003EF0A3 /* Icon-Small@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6962A529444E83003EF0A3 /* Icon-Small@2x-1.png */; };
 		4D6962B929444E83003EF0A3 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6962A629444E83003EF0A3 /* Icon-Small@2x.png */; };
 		4D6962BA29444E83003EF0A3 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D6962A729444E83003EF0A3 /* Icon-Small@3x.png */; };
+		4D8541D52946D1AB002B2863 /* PetKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8541D42946D1AB002B2863 /* PetKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D8541D82946D1AB002B2863 /* PetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8541D22946D1AB002B2863 /* PetKit.framework */; };
+		4D8541D92946D1AB002B2863 /* PetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8541D22946D1AB002B2863 /* PetKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D8541E02946E274002B2863 /* Nurture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8541DE2946E274002B2863 /* Nurture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D8541E22946E274002B2863 /* Nurture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8541DF2946E274002B2863 /* Nurture.m */; };
+		4D8541E52946E33F002B2863 /* NurtureItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D8541E32946E33F002B2863 /* NurtureItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D8541E72946E33F002B2863 /* NurtureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8541E42946E33F002B2863 /* NurtureItem.m */; };
+		4D8541EA2946EE2E002B2863 /* Nurture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8541E82946EE2E002B2863 /* Nurture.swift */; };
+		4D8541EC2946F13B002B2863 /* NurtureItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8541EB2946F13B002B2863 /* NurtureItem+Extension.swift */; };
+		4D8541F02946F363002B2863 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8541EF2946F363002B2863 /* Bundle+Extension.swift */; };
+		4D8541F22946F6E4002B2863 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8541EF2946F363002B2863 /* Bundle+Extension.swift */; };
 		4DA12B9D293EFC06007A45B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA12B9C293EFC06007A45B7 /* SearchBar.swift */; };
 		4DA1ED8529409F630087BD37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DA1ED8429409F630087BD37 /* GoogleService-Info.plist */; };
 		4DA1ED882940A27D0087BD37 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA1ED872940A27D0087BD37 /* FirebaseAnalytics */; };
@@ -103,6 +112,13 @@
 			remoteGlobalIDString = 4D3AF9FD2942E11F00F18C1A;
 			remoteInfo = TutorialOnboarding;
 		};
+		4D8541D62946D1AB002B2863 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DBAD27D26AF38AE0057A5FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D8541D12946D1AB002B2863;
+			remoteInfo = PetKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +130,7 @@
 			files = (
 				4D07A6CA29434E69007E83B6 /* TutorialAbout.framework in Embed Frameworks */,
 				4D3AFA052942E11F00F18C1A /* TutorialOnboarding.framework in Embed Frameworks */,
+				4D8541D92946D1AB002B2863 /* PetKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,7 +142,6 @@
 		4D3AF9FE2942E11F00F18C1A /* TutorialOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TutorialOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3AFA002942E11F00F18C1A /* TutorialOnboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TutorialOnboarding.h; sourceTree = "<group>"; };
 		4D3AFA0B2942E2BF00F18C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = TodoAppSwifUI/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		4D3AFA0F2942E3B600F18C1A /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		4D3AFA122942E3C800F18C1A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4D3AFA152942E3DC00F18C1A /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		4D3AFA192942E6D900F18C1A /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -154,6 +170,16 @@
 		4D6962A529444E83003EF0A3 /* Icon-Small@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x-1.png"; sourceTree = "<group>"; };
 		4D6962A629444E83003EF0A3 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		4D6962A729444E83003EF0A3 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		4D8541D22946D1AB002B2863 /* PetKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PetKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D8541D42946D1AB002B2863 /* PetKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PetKit.h; sourceTree = "<group>"; };
+		4D8541DD2946E273002B2863 /* TodoAppSwifUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TodoAppSwifUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		4D8541DE2946E274002B2863 /* Nurture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nurture.h; sourceTree = "<group>"; };
+		4D8541DF2946E274002B2863 /* Nurture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nurture.m; sourceTree = "<group>"; };
+		4D8541E32946E33F002B2863 /* NurtureItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NurtureItem.h; sourceTree = "<group>"; };
+		4D8541E42946E33F002B2863 /* NurtureItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NurtureItem.m; sourceTree = "<group>"; };
+		4D8541E82946EE2E002B2863 /* Nurture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nurture.swift; sourceTree = "<group>"; };
+		4D8541EB2946F13B002B2863 /* NurtureItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NurtureItem+Extension.swift"; sourceTree = "<group>"; };
+		4D8541EF2946F363002B2863 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		4DA12B9C293EFC06007A45B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4DA1ED8429409F630087BD37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DB1E0B5294035F000E1CA8D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -201,10 +227,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D8541CF2946D1AB002B2863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DBAD28226AF38AE0057A5FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8541D82946D1AB002B2863 /* PetKit.framework in Frameworks */,
 				4DA1ED8E2940A27D0087BD37 /* FirebaseDatabase in Frameworks */,
 				4DA1ED882940A27D0087BD37 /* FirebaseAnalytics in Frameworks */,
 				4DA1ED8A2940A27D0087BD37 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -245,7 +279,7 @@
 		4D3AFA0E2942E37800F18C1A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D3AFA0F2942E3B600F18C1A /* Bundle+Extension.swift */,
+				4D8541EF2946F363002B2863 /* Bundle+Extension.swift */,
 				4D3AFA122942E3C800F18C1A /* Color+Extension.swift */,
 				4D3AFA152942E3DC00F18C1A /* Image+Extension.swift */,
 			);
@@ -324,6 +358,28 @@
 			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
+		4D8541D32946D1AB002B2863 /* PetKit */ = {
+			isa = PBXGroup;
+			children = (
+				4D8541D42946D1AB002B2863 /* PetKit.h */,
+				4D8541DE2946E274002B2863 /* Nurture.h */,
+				4D8541DF2946E274002B2863 /* Nurture.m */,
+				4D8541DD2946E273002B2863 /* TodoAppSwifUI-Bridging-Header.h */,
+				4D8541E32946E33F002B2863 /* NurtureItem.h */,
+				4D8541E42946E33F002B2863 /* NurtureItem.m */,
+				4D8541E82946EE2E002B2863 /* Nurture.swift */,
+			);
+			path = PetKit;
+			sourceTree = "<group>";
+		};
+		4D8541EE2946F142002B2863 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D8541EB2946F13B002B2863 /* NurtureItem+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4D9879942941B833002010FA /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +446,7 @@
 			children = (
 				4DBAD28726AF38AE0057A5FF /* TodoAppSwifUI */,
 				4D3AF9FF2942E11F00F18C1A /* TutorialOnboarding */,
+				4D8541D32946D1AB002B2863 /* PetKit */,
 				4DBAD28626AF38AE0057A5FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -400,6 +457,7 @@
 				4DBAD28526AF38AE0057A5FF /* TodoAppSwifUI.app */,
 				4D3AF9FE2942E11F00F18C1A /* TutorialOnboarding.framework */,
 				4D07A6C329434E69007E83B6 /* TutorialAbout.framework */,
+				4D8541D22946D1AB002B2863 /* PetKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -408,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBAD28826AF38AE0057A5FF /* TodoApp.swift */,
+				4D8541EE2946F142002B2863 /* Extensions */,
 				4DFEC111293F548700590ED0 /* ViewModel */,
 				4DFEC10C293F4B1F00590ED0 /* Resources */,
 				4DA12B9E293F0474007A45B7 /* Utils */,
@@ -492,6 +551,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D8541CD2946D1AB002B2863 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8541D52946D1AB002B2863 /* PetKit.h in Headers */,
+				4D8541E02946E274002B2863 /* Nurture.h in Headers */,
+				4D8541E52946E33F002B2863 /* NurtureItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -531,6 +600,24 @@
 			productReference = 4D3AF9FE2942E11F00F18C1A /* TutorialOnboarding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		4D8541D12946D1AB002B2863 /* PetKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8541DC2946D1AB002B2863 /* Build configuration list for PBXNativeTarget "PetKit" */;
+			buildPhases = (
+				4D8541CD2946D1AB002B2863 /* Headers */,
+				4D8541CE2946D1AB002B2863 /* Sources */,
+				4D8541CF2946D1AB002B2863 /* Frameworks */,
+				4D8541D02946D1AB002B2863 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetKit;
+			productName = PetKit;
+			productReference = 4D8541D22946D1AB002B2863 /* PetKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4DBAD28426AF38AE0057A5FF /* TodoAppSwifUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DBAD29426AF38B90057A5FF /* Build configuration list for PBXNativeTarget "TodoAppSwifUI" */;
@@ -545,6 +632,7 @@
 			dependencies = (
 				4D3AFA032942E11F00F18C1A /* PBXTargetDependency */,
 				4D07A6C829434E69007E83B6 /* PBXTargetDependency */,
+				4D8541D72946D1AB002B2863 /* PBXTargetDependency */,
 			);
 			name = TodoAppSwifUI;
 			packageProductDependencies = (
@@ -578,8 +666,13 @@
 						CreatedOnToolsVersion = 13.2;
 						LastSwiftMigration = 1320;
 					};
+					4D8541D12946D1AB002B2863 = {
+						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
+					};
 					4DBAD28426AF38AE0057A5FF = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -604,6 +697,7 @@
 				4DBAD28426AF38AE0057A5FF /* TodoAppSwifUI */,
 				4D3AF9FD2942E11F00F18C1A /* TutorialOnboarding */,
 				4D07A6C229434E69007E83B6 /* TutorialAbout */,
+				4D8541D12946D1AB002B2863 /* PetKit */,
 			);
 		};
 /* End PBXProject section */
@@ -622,6 +716,13 @@
 			files = (
 				4D3AFA0D2942E2C000F18C1A /* Assets.xcassets in Resources */,
 				4D3AFA282942F99300F18C1A /* Fonts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8541D02946D1AB002B2863 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,8 +774,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3AFA112942E3B600F18C1A /* Bundle+Extension.swift in Sources */,
 				4D3AFA252942F88300F18C1A /* PageView.swift in Sources */,
+				4D8541F22946F6E4002B2863 /* Bundle+Extension.swift in Sources */,
 				4D3AFA142942E3C800F18C1A /* Color+Extension.swift in Sources */,
 				4D3AFA1B2942E6D900F18C1A /* Onboarding.swift in Sources */,
 				4DFC42FA29430C5B00ABBE56 /* OnboardingButtonStyle.swift in Sources */,
@@ -683,11 +784,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D8541CE2946D1AB002B2863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8541E72946E33F002B2863 /* NurtureItem.m in Sources */,
+				4D8541EA2946EE2E002B2863 /* Nurture.swift in Sources */,
+				4D8541E22946E274002B2863 /* Nurture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DBAD28126AF38AE0057A5FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4DFEC115293FA99C00590ED0 /* GithubUsersListView.swift in Sources */,
+				4D8541F02946F363002B2863 /* Bundle+Extension.swift in Sources */,
 				4DFEC11E293FBA4B00590ED0 /* GithubUserRepository.swift in Sources */,
 				4DB94E17293E5796007C8064 /* Persistence.swift in Sources */,
 				4DFEC113293F922F00590ED0 /* MainView.swift in Sources */,
@@ -697,11 +809,11 @@
 				4D58C7472940E0A300473FF8 /* FavoriteItemDetailView.swift in Sources */,
 				4D3AFA1A2942E6D900F18C1A /* Onboarding.swift in Sources */,
 				4D3AFA132942E3C800F18C1A /* Color+Extension.swift in Sources */,
+				4D8541EC2946F13B002B2863 /* NurtureItem+Extension.swift in Sources */,
 				4DB94E04293E26BF007C8064 /* AddTodoView.swift in Sources */,
 				4D3AFA212942ED9700F18C1A /* OnboardingView.swift in Sources */,
 				4DBAD28926AF38AE0057A5FF /* TodoApp.swift in Sources */,
 				4D3AFA242942F88300F18C1A /* PageView.swift in Sources */,
-				4D3AFA102942E3B600F18C1A /* Bundle+Extension.swift in Sources */,
 				4DB94E0C293E3DC3007C8064 /* TodoItemDetailView.swift in Sources */,
 				4DFEC10E293F4DDC00590ED0 /* Forms.swift in Sources */,
 				4DB94E06293E2D53007C8064 /* Todo.swift in Sources */,
@@ -732,6 +844,11 @@
 			isa = PBXTargetDependency;
 			target = 4D3AF9FD2942E11F00F18C1A /* TutorialOnboarding */;
 			targetProxy = 4D3AFA022942E11F00F18C1A /* PBXContainerItemProxy */;
+		};
+		4D8541D72946D1AB002B2863 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D8541D12946D1AB002B2863 /* PetKit */;
+			targetProxy = 4D8541D62946D1AB002B2863 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -872,6 +989,73 @@
 			};
 			name = Release;
 		};
+		4D8541DA2946D1AB002B2863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A28NKSTKN3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forever.bee.PetKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4D8541DB2946D1AB002B2863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = A28NKSTKN3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forever.bee.PetKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4DBAD29226AF38B90057A5FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -994,6 +1178,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoAppSwifUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A28NKSTKN3;
@@ -1006,6 +1191,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forever.bee.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetKit/TodoAppSwifUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1017,6 +1204,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoAppSwifUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A28NKSTKN3;
@@ -1029,6 +1217,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forever.bee.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetKit/TodoAppSwifUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1051,6 +1240,15 @@
 			buildConfigurations = (
 				4D3AFA072942E11F00F18C1A /* Debug */,
 				4D3AFA082942E11F00F18C1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8541DC2946D1AB002B2863 /* Build configuration list for PBXNativeTarget "PetKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8541DA2946D1AB002B2863 /* Debug */,
+				4D8541DB2946D1AB002B2863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
